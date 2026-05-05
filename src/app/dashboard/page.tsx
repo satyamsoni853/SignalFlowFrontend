@@ -83,17 +83,10 @@ export default function DashboardPage() {
       <header className="border-b border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-800 transition-colors duration-300">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3">
-            <span className="text-lg font-bold text-zinc-900 dark:text-zinc-100">SignalFlow 🚀</span>
+            <span className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Kapoor Signal Flow</span>
             <span className={`h-2 w-2 rounded-full shadow-sm ${STATUS_DOT[status]}`} title={`SSE: ${status}`} />
           </div>
           <div className="flex items-center gap-4">
-            <button
-              onClick={toggleDarkMode}
-              className="rounded-full p-2 text-zinc-500 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:bg-zinc-700 transition-colors"
-              title="Toggle Dark Mode"
-            >
-              {isDark ? '☀️' : '🌙'}
-            </button>
             <span className="text-sm text-zinc-500 hidden sm:inline">{user.email}</span>
             <button
               onClick={() => { logout(); router.push('/login'); }}
